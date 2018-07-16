@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      HOME
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let noticia of noticias">
+
+    <ion-item>
+      
+      <h2>{{noticia.fonte}}</h2>
+      <p>{{noticia.legenda}}</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>{{noticia.descricao}}</p>
+    </ion-card-content>
+
+    <ion-col center text-center>
+      <ion-note>
+        {{noticia.data}}
+      </ion-note>
+    </ion-col>
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      CADASTRAR USUARIO
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form id="myForm" #myForm="ngForm" (ngSubmit)="save()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Nome</ion-label>
+        <ion-input type="text" name="nome" [(ngModel)]="model.nome" required #name="ngModel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Telefone</ion-label>
+        <ion-input type="tel" name="telefone" [(ngModel)]="model.telefone" required #name="ngModel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Nascimento</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" name="nascimento" [(ngModel)]="model.nascimento" required #name="ngModel"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="model.email" required #name="ngModel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>CPF</ion-label>
+        <ion-input type="number" name="cpf" [(ngModel)]="model.cpf" required #name="ngModel"></ion-input>
+      </ion-item>
+
+
+    </ion-list>
+
+    <button [disabled]="!myForm.form.valid" type="submit" ion-button block onClick="window.location.href='';">Salvar</button>
+    <button type="reset" ion-button block>Limpar</button>
+
+
+  </form>
+</ion-content>
