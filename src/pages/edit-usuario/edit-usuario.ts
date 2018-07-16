@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { UsuarioProvider, Usuario } from '../../providers/usuario/usuario';
-import { FormBuilder, Validators } from '@angular/forms';
 
 @IonicPage()
 @Component({
@@ -19,7 +18,7 @@ export class EditUsuarioPage {
   errorEmail = false;
   errorPassword = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private usuarioProvider: UsuarioProvider, private toast: ToastController,public formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private usuarioProvider: UsuarioProvider, private toast: ToastController) {
     if (this.navParams.data.usuario && this.navParams.data.key) {
       this.model = this.navParams.data.usuario;
       this.key =  this.navParams.data.key;

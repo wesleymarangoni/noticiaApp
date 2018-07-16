@@ -12,6 +12,10 @@ import { DatePipe } from '@angular/common';
 import { UsuarioProvider } from '../providers/usuario/usuario';
 import { ListaUsuarioPage } from '../pages/listaUsuario/listaUsuario';
 import { ListaUsuarioPageModule } from '../pages/listaUsuario/listaUsuario.module';
+import { ContatoPage } from '../pages/contato/contato';
+import { SobrePage } from '../pages/sobre/sobre';
+import { ContatoPageModule } from '../pages/contato/contato.module';
+import { SobrePageModule } from '../pages/sobre/sobre.module';
 
 @NgModule({
   declarations: [
@@ -22,13 +26,16 @@ import { ListaUsuarioPageModule } from '../pages/listaUsuario/listaUsuario.modul
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    ListaUsuarioPageModule
+    ListaUsuarioPageModule,
+    ContatoPageModule,
+    SobrePageModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListaUsuarioPage
+    ListaUsuarioPage,
   ],
   providers: [
     StatusBar,
